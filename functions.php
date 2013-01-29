@@ -16,28 +16,45 @@ function bm_front_specific_styles(){
     wp_enqueue_style('style-lightbox', THEMEURL.'/style-lightbox.css', false,  '0.0.8');
 }
 
-add_action('wp_enqueue_scripts','bm_init');
+// Register jquery, used by desktop and mobile
+if(!is_admin())
+    add_action('wp_enqueue_scripts','bm_init');
 function bm_init(){
     ?>
 <script type="text/javascript">
 /* Try to get out of frames! */
-if ( window.top != window.self ) { 
+if ( window.top != window.self ) {
     window.top.location = self.location.href
 }
 </script>
 
     <?php
-    //load mini jQuery if not in admin (faster CDN).
-    //In admin, we need the default, which is in no-conflicts mode
-    if( !is_admin()){
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', THEMEURL.'/js/jquery-1.3.1.min.js','','','1.1');
-    }
-    //jQuery
-    wp_enqueue_script('jquery');
+    // 必须 wp_deregister_script 才能更改地址
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', THEMEURL.'/js/jquery/1.7.1/jquery.js','','','1.1');
+    wp_deregister_script('json2');
+    wp_register_script('json2', THEMEURL.'/js/plugins/json2.js','','','1.1');
+
     wp_enqueue_script('app', THEMEURL.'/js/app.js', array('jquery'), '0.5', true);
     wp_enqueue_script('jquery.lightbox', THEMEURL.'/js/jquery.lightbox.js', array('jquery'), '0.5', true);
     wp_enqueue_script('comments-ajax', THEMEURL.'/comments-ajax.js', array('jquery'), '3.9', true);
+}
+
+add_action('wp_footer', 'footer_js', 999999);
+function footer_js() {
+?>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11797446-3']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<?php
 }
 
 // This theme uses wp_nav_menu() in one location.
@@ -61,7 +78,7 @@ if( function_exists('register_sidebar') ) {
 function bm_readmore($display=true){
     $echo = ' <a href="'. get_permalink() . '" class="more">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'bm' ) . '</a>';
     if($display==false){
-        return $echo; 
+        return $echo;
     }else{
         echo $echo;
     }
@@ -116,7 +133,7 @@ if(!function_exists('pagenavi')){
                 } elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))) {
                     for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++){
                         echo "<a href='" . get_pagenum_link($i) ."'";
-                        if($i==$paged) 
+                        if($i==$paged)
                             echo " class='current'";
                         echo ">$i</a>";
                     }
@@ -162,7 +179,7 @@ if(!function_exists('seo_desc_keywords')){
 function seo_desc_keywords() {
     global $cat,$post,$ifr;
     if(is_category()){
-        $description = category_description($cat);  
+        $description = category_description($cat);
         $keywords =get_cat_name($cat);
     }elseif (is_single()){
         if(post_password_required()){
@@ -187,7 +204,7 @@ function seo_desc_keywords() {
         $description="";
     }
     if($keywords=="")
-        $keywords = $ifr['site_keywords'];  
+        $keywords = $ifr['site_keywords'];
     if($description=="")
         $description = $ifr['site_description'];
     echo '<meta name="keywords" content="'.$keywords.'" /><meta name="description" content="'.$description.'" />';
@@ -206,10 +223,10 @@ if(!function_exists('entry_meta')){
                     the_time('Y-n-j');
                 }
                 echo $seprator;
-                the_author_posts_link(); 
-                if(function_exists('the_views')) { 
-                    echo $seprator; 
-                    the_views(); 
+                the_author_posts_link();
+                if(function_exists('the_views')) {
+                    echo $seprator;
+                    the_views();
                 }
                 break;
             case 'special' :
@@ -227,10 +244,10 @@ if(!function_exists('entry_meta')){
                 echo ', ';
                 the_time('H:i');
                 echo $seprator;
-                the_author_posts_link(); 
+                the_author_posts_link();
                 break;
         }
-        edit_post_link( $seprator . '编辑', ' &nbsp;'); 
+        edit_post_link( $seprator . '编辑', ' &nbsp;');
     }
 }
 
@@ -245,18 +262,18 @@ $GLOBALS['comment'] = $comment; ?>
         <?php echo get_avatar($comment,$size='32',$default=''); ?>
         <h4 class="com-green">
             <CITE><?php comment_author_link(); ?></CITE>
-            <SMALL><?php comment_date(); ?>&nbsp;<?php comment_time(); ?><?php edit_comment_link(__('(Edit)'),'  ','') ?></SMALL> 
+            <SMALL><?php comment_date(); ?>&nbsp;<?php comment_time(); ?><?php edit_comment_link(__('(Edit)'),'  ','') ?></SMALL>
             <span class="replay-button" style="display:none;"> <?php comment_reply_link(array('depth' => $depth,'max_depth' => '12', 'reply_text' => "[回复]")) ?></span>
         </h4>
     </div>
     <div class="comment-content">
         <?php comment_text(); echo $children; ?>
     </div>
-<?php 
+<?php
 }
 
 add_filter('the_content','jquery_lightbox');
-function jquery_lightbox($content){ 
+function jquery_lightbox($content){
     global $post;
     // jquery_lightbox
     $pattern = "/(<a(?![^>]*?rel=['\"]lightbox.*)[^>]*?href=['\"][^'\"]+?\.(?:bmp|gif|jpg|jpeg|png)['\"][^\>]*)>/i";
