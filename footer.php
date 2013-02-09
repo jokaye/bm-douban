@@ -1,4 +1,4 @@
-    <footer id="footer" role="contentinfo">
+﻿    <footer id="footer" role="contentinfo">
         <span id="icp" class="fleft gray-link">© 2011 澹澹 All Rights Reserved.
 
         </span>

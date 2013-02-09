@@ -111,6 +111,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 11732,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/JSLint/JSLint.sublime-build",
 	"command_palette":
@@ -172,6 +180,9 @@
 	},
 	"file_history":
 	[
+		"/D/wdd/doumii.com/wp-content/themes/bm-douban/footer.php",
+		"/D/Program Files/Sublime Text 2.0/Data/Packages/GBK Encoding Support/tmp/footer.php                D%3A%5Cwdd%5Cdoumii.com%5Cwp-content%5Cthemes%5Cbm-douban%5Cfooter.php",
+		"/D/wdd/doumii.com/wp-content/themes/bm-douban/bm-douban.sublime-project",
 		"/D/www/doumii/wp-content/themes/bm-douban/header.php",
 		"/D/www/doumii/wp-content/themes/bm-douban/index.php",
 		"/D/www/wordpress/wp-content/themes/twentytwelve/style.css",
@@ -296,10 +307,7 @@
 		"/D/wdd/ifanr/wp-content/themes/apple4us/content-page.php",
 		"/D/wdd/ifanr/wp-content/themes/apple4us/apple4us.sublime-project",
 		"/D/wdd/ifanr/wp-content/themes/.hgignore",
-		"/D/Users/jianfeng/Documents/GitHub/html2canvas/html2canvas.sublime-project",
-		"/D/Users/jianfeng/Documents/GitHub/html2canvas/readme.md",
-		"/D/Users/jianfeng/Documents/GitHub/html2canvas/external/flashcanvas.js",
-		"/D/www/doumii/wp-content/themes/bm-douban/bm-douban/style.css"
+		"/D/Users/jianfeng/Documents/GitHub/html2canvas/html2canvas.sublime-project"
 	],
 	"find":
 	{
@@ -317,6 +325,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"www",
+			"doumii",
 			"archive-header",
 			"twentytwelve",
 			"archive_header",
@@ -442,9 +452,7 @@
 			"key",
 			"false",
 			", successCallback, errorCallback",
-			"_obj",
-			"ajax",
-			"$rc_options"
+			"_obj"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -475,6 +483,32 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "functions.php",
+					"settings":
+					{
+						"buffer_size": 11732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
