@@ -261,7 +261,7 @@ $GLOBALS['comment'] = $comment; ?>
     <div class="comment-author">
         <?php echo get_avatar($comment,$size='32',$default=''); ?>
         <h4 class="com-green">
-            <CITE><?php comment_author_link(); ?></CITE>
+            <CITE class="m-r-5"><?php comment_author_link(); ?></CITE>
             <SMALL><?php comment_date(); ?>&nbsp;<?php comment_time(); ?><?php edit_comment_link(__('(Edit)'),'  ','') ?></SMALL>
             <span class="replay-button" style="display:none;"> <?php comment_reply_link(array('depth' => $depth,'max_depth' => '12', 'reply_text' => "[回复]")) ?></span>
         </h4>

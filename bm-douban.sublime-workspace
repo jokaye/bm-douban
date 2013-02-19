@@ -115,7 +115,39 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 11732,
+				"buffer_size": 11746,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/wdd/caogenbobao.com/wp-content/themes/caogen.3.0.1/.gitignore",
+			"settings":
+			{
+				"buffer_size": 1990,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 17302,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "content-image.php",
+			"settings":
+			{
+				"buffer_size": 2450,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/wdd/caogenbobao.com/wp-content/themes/caogen.3.0.1/backbone/backbone.js",
+			"settings":
+			{
+				"buffer_size": 55706,
 				"line_ending": "Windows"
 			}
 		}
@@ -180,12 +212,13 @@
 	},
 	"file_history":
 	[
+		"/D/www/0framework/bootstrap/css/bootstrap.css",
+		"/D/www/wordpress/wp-content/themes/twentytwelve/style.css",
 		"/D/wdd/doumii.com/wp-content/themes/bm-douban/footer.php",
 		"/D/Program Files/Sublime Text 2.0/Data/Packages/GBK Encoding Support/tmp/footer.php                D%3A%5Cwdd%5Cdoumii.com%5Cwp-content%5Cthemes%5Cbm-douban%5Cfooter.php",
 		"/D/wdd/doumii.com/wp-content/themes/bm-douban/bm-douban.sublime-project",
 		"/D/www/doumii/wp-content/themes/bm-douban/header.php",
 		"/D/www/doumii/wp-content/themes/bm-douban/index.php",
-		"/D/www/wordpress/wp-content/themes/twentytwelve/style.css",
 		"/D/www/doumii/wp-content/themes/bm-douban/content.php",
 		"/D/www/doumii/wp-content/themes/bm-douban/content-quote.php",
 		"/D/www/doumii/wp-content/themes/bm-douban/content-status.php",
@@ -202,7 +235,6 @@
 		"/D/www/wordpress/wp-content/themes/twentytwelve/category.php",
 		"/D/www/wordpress/wp-content/themes/twentytwelve/content-quote.php",
 		"/D/www/doumii/wp-content/themes/bm-douban/content-single.php",
-		"/D/www/0framework/bootstrap/css/bootstrap.css",
 		"/D/Users/jianfeng/Documents/GitHub/bootstrap/less/reset.less",
 		"/D/www/wordpress/wp-content/themes/twentytwelve/content.php",
 		"/D/www/wordpress/wp-content/themes/twentytwelve/single.php",
@@ -325,6 +357,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cite",
 			"www",
 			"doumii",
 			"archive-header",
@@ -451,8 +484,7 @@
 			"Autocompleter",
 			"key",
 			"false",
-			", successCallback, errorCallback",
-			"_obj"
+			", successCallback, errorCallback"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -481,6 +513,7 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -488,7 +521,112 @@
 					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 11732,
+						"buffer_size": 11746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9575,
+								9575
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6718.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/wdd/caogenbobao.com/wp-content/themes/caogen.3.0.1/.gitignore",
+					"settings":
+					{
+						"buffer_size": 1990,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1959,
+								1959
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4116.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 17302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4148,
+								4148
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5567.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "content-image.php",
+					"settings":
+					{
+						"buffer_size": 2450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1967,
+								1967
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 973.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/wdd/caogenbobao.com/wp-content/themes/caogen.3.0.1/backbone/backbone.js",
+					"settings":
+					{
+						"buffer_size": 55706,
 						"regions":
 						{
 						},
@@ -501,10 +639,10 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 53438.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -545,7 +683,7 @@
 		"cols":
 		[
 			0.0,
-			0.488819875776,
+			0.554658385093,
 			1.0
 		],
 		"rows":

@@ -17,6 +17,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
     vertical-align: baseline;
 }
+cite {
+  font-style: normal;
+}
 body {
     line-height: 1;
 }
@@ -497,21 +500,20 @@ body {
         color: #666;
     }
 
-    .alignleft,.alignright{
+    .alignleft,
+    .alignright {
         line-height: 30px;
         white-space: nowrap;
         display: block;
-        height: 30px;
-        width: 48%;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .alignleft{
+    .alignleft {
         float: left;
         text-align: left;
         text-indent: 12px;
     }
-    .alignright{
+    .alignright {
         float: right;
         text-align: right;
         text-indent: 12px;
